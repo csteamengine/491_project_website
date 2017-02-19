@@ -1,7 +1,7 @@
 package com.example.Controller;
 
-import com.example.Entity.LoopbackRequest;
-import com.example.Service.LoopbackService;
+import com.example.Entity.EchoRequest;
+import com.example.Service.EchoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,9 +14,9 @@ import java.io.IOException;
 public class HomeController {
 
     @Autowired
-    private LoopbackService loopbackService;
+    private EchoService echoService;
 
-    @RequestMapping("/loopback")
+    @RequestMapping("/echo")
     public String loopback(@RequestParam String data){
         boolean isValidJson;
         //Try to parse the "json", return false if we cant (meaning the json is invalid).
@@ -29,16 +29,16 @@ public class HomeController {
             isValidJson = false;
         }
         //Return if the string is valid, and the text
-        LoopbackRequest request = new LoopbackRequest(isValidJson, data);
+        EchoRequest request = new EchoRequest(isValidJson, data);
 
         //Set our loopback utils last request
-        loopbackService.addRequest(request);
+        echoService.addRequest(request);
         return request.toString();
     }
 
-    @RequestMapping("/loopback/view")
+    @RequestMapping("/echo/view")
     public String loopbackView(){
-        return loopbackService.printRequests();
+        return echoService.printRequests();
     }
 
     @RequestMapping("/hello")

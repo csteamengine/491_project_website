@@ -1,28 +1,28 @@
 package com.example.Service;
 
-import com.example.Entity.LoopbackRequest;
+import com.example.Entity.EchoRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class LoopbackService {
+public class EchoService {
 
-    private ArrayList<LoopbackRequest> requests;
+    private ArrayList<EchoRequest> requests;
 
-    public LoopbackService(){
+    public EchoService(){
         requests = new ArrayList<>();
     }
 
-    public void addRequest(LoopbackRequest newRequest){
+    public void addRequest(EchoRequest newRequest){
         if(requests.size() > 3){
             requests.remove(0);
         }
         requests.add(newRequest);
     }
 
-    public List<LoopbackRequest> getRequests(){
+    public List<EchoRequest> getRequests(){
         return requests;
     }
 

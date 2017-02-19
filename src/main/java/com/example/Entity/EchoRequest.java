@@ -1,10 +1,10 @@
 package com.example.Entity;
 
-public class LoopbackRequest {
+public class EchoRequest {
     private boolean isValidJson;
     private String text;
 
-    public LoopbackRequest(boolean isValidJson, String text){
+    public EchoRequest(boolean isValidJson, String text){
         this.isValidJson = isValidJson;
         this.text = text;
     }
@@ -27,7 +27,7 @@ public class LoopbackRequest {
 
     @Override
     public String toString() {
-        return "LoopbackRequest{" +
+        return "EchoRequest{" +
                 "isValidJson=" + isValidJson +
                 ", text='" + text + '\'' +
                 '}';
