@@ -41,8 +41,8 @@ public class HomeController {
         return echoService.printRequests();
     }
 
-    @RequestMapping("/hello")
-    public String hello(){
-        return "ayy";
-    }
+//    @RequestMapping("/")
+//    public String hello(){
+//        return "ayy";
+//    }
 }
