@@ -24,5 +24,11 @@ This way, multiple sensors can be on one leafNode, but leafNodes cannot share a 
 The sensorType table will be how we can tell what type of data is being stored. Each sensor will also store a unitID, which will show what type of measurements are being taken.
 
 ### Units
-The units table will store the name of the unit being used. 
+The units table will store the name of the unit being used.
+
+### Deploying the Application
+If the application is running, we need to kill the process. You can do this by running the command `ps -ef | less` to find the PID of the process. From there,
+use sudo kill PID <pid> to stop the server.
+
+To bring it back up, use the command: `sudo nohup java -jar <name>.jar` This is not the cleanest solution, eventually we would like to create a service script for it, but this works for now.
 
