@@ -1,6 +1,6 @@
-package com.example.Service;
+package com.sensorweb.Service;
 
-import com.example.Entity.EchoRequest;
+import com.sensorweb.Entity.EchoRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

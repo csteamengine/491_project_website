@@ -1,7 +1,7 @@
-package com.example.Controller;
+package com.sensorweb.Controller;
 
-import com.example.Entity.EchoRequest;
-import com.example.Service.EchoService;
+import com.sensorweb.Entity.EchoRequest;
+import com.sensorweb.Service.EchoService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

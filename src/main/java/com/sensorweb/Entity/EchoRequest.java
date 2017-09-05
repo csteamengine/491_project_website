@@ -1,4 +1,4 @@
-package com.example.Entity;
+package com.sensorweb.Entity;
 
 public class EchoRequest {
     private boolean isValidJson;
